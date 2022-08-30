@@ -41,7 +41,6 @@ void divisors_sorted(int n)
     for( ; i>=1 ; i--)
         if(n%i==0 && n/i>i)
             cout<<n/i<<", ";
-
 }
 
 int main()

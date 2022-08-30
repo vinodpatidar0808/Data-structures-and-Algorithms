@@ -44,8 +44,8 @@ bool is_prime_3(int n)
         if(n%(i-1)==0 || n%(i+1)==0)
             return false;
     }
-    return true;
     
+    return true;   
 }
 
 int main()
