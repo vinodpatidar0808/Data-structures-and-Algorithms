@@ -15,6 +15,7 @@ void printArray(int arr[], int n)
 int main()
 {
     int n ;
+    cout<<"size of array: "<<endl;
     cin>>n;
     int  arr[n];
     int i = 0;
@@ -25,10 +26,5 @@ int main()
     }
     cout<<"original array: "<<endl;
     printArray(arr, n);
-
-    cout<<endl;
-    cout<<"reversed array :"<<endl;
-    printArray(arr, n);
-
     return 0;
 }
