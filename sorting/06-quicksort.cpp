@@ -81,16 +81,20 @@ int hoarePartition(int arr[], int l, int h)
 {
     // first element as pivot
     int pivot = arr[l];
-    int i =l-1, j = h+1;
+    int i =l, j = h;
     while(true)
     {
-        do{
+        while(arr[i]<=pivot)
             i++;
-        }while(arr[i]<=pivot);
-        do
-        {
+        while(arr[j]>pivot)
             j--;
-        } while (arr[j]>pivot);
+        // do{
+        //     i++;
+        // }while(arr[i]<=pivot);
+        // do
+        // {
+        //     j--;
+        // } while (arr[j]>pivot);
         if(i>=j)
             return j;
         swap(arr[i],arr[j]);
