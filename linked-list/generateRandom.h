@@ -10,4 +10,20 @@ int getRandom(int minValue, int maxValue)
     return (rand() % (maxValue - minValue)) + minValue;
 }
 
+int getRandomEven(int minValue, int maxValue)
+{
+    int val = (rand() % (maxValue - minValue)) + minValue;
+    if (val & 1 )
+        return val -1;
+    return val;
+}
+
+int getRandomOdd(int minValue, int maxValue)
+{
+    int val = (rand() % (maxValue - minValue)) + minValue;
+    if (val & 1 == 0)
+        return val -1;
+    return val;
+}
+
 #endif
