@@ -3,3 +3,4 @@ codesnaps
 *.exe
 *.png
 remainingProblem.txt
+/stack/07-k-stacks-in-array.cpp
