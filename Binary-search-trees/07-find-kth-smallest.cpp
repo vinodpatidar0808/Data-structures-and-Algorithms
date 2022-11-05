@@ -6,7 +6,7 @@
 
 using namespace std; 
 
-// simple approach for return kth smallest : using inorder traversal, inorder  traversal of binary search tree is always sorted(ascending)
+// simple approach for kth smallest : using inorder traversal, inorder  traversal of binary search tree is always sorted(ascending)
 // time comp : O(n)
 
 void printKth(node *root, int k)

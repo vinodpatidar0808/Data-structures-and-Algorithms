@@ -54,5 +54,26 @@ void inorder(node *root)
     inorder(root->right);
 }
 
+node *constructTree(int inorder[], int preorder[], int s, int e)
+{
+    if(s > e)
+        return NULL;
+    static int preInd = 0;
+    node *root =  new node(preorder[preInd++]);
+    int rootInd ;
+    for(int i= s;i<=e;i++)
+    {
+        if(inorder[i] == root->val)
+        {
+            rootInd = i ;
+            break;
+        }
+    }
+
+    root->left = constructTree(inorder, preorder, s, rootInd-1);
+    root->right = constructTree(inorder, preorder, rootInd+1, e);
+    return root;
+}
+
 
 #endif
